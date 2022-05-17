@@ -2,7 +2,7 @@ html body {
     font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #333;
+    color: #d5dddc;
     background-color: #fff;
     overflow: initial;
     box-sizing: border-box;
@@ -74,7 +74,7 @@ html body h6 {
 }
 
 html body strong {
-    color: #000
+    color: rgba(164, 247, 113, 0.927)
 }
 
 html body del {
@@ -156,8 +156,8 @@ html body blockquote {
     margin: 16px 0;
     font-size: inherit;
     padding: 0 15px;
-    color: #5c5c5c;
-    background-color: #f0f0f0;
+    color: #daece3e1;
+    background-color: #000000a6;
     border-left: 4px solid #d6d6d6
 }
 
@@ -177,19 +177,19 @@ html body hr {
 }
 
 html body table {
-    margin: 10px 0 15px 0;
+    margin: auto;
     border-collapse: collapse;
     border-spacing: 0;
     display: block;
     width: 100%;
     overflow: auto;
+    box-sizing: border-box;
     word-break: normal;
-    word-break: keep-all
 }
 
 html body table th {
     font-weight: bold;
-    color: #000
+    color: rgb(255, 255, 255)
 }
 
 html body table td,
@@ -217,11 +217,12 @@ html body dl dd {
 
 html body code {
     font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
-    font-size: .85em !important;
-    color: #000;
-    background-color: #f0f0f0;
+    font-size: .95em !important;
+    
+    color: rgb(207, 255, 165);
+    background-color: transparent;
     border-radius: 3px;
-    padding: .2em 0
+    padding: .12em 0
 }
 
 html body code::before,
@@ -285,7 +286,7 @@ html body ul,
 html body ol,
 html body dl,
 html body pre {
-    color: #c7c7c7;
+    color: #bcc2c1;
     margin-top: 0;
     margin-bottom: 16px
 }
@@ -295,13 +296,13 @@ html body kbd {
     border: 1px solid #d6d6d6;
     border-bottom: 2px solid #c7c7c7;
     padding: 2px 4px;
-    background-color: #f0f0f0;
+    background-color: #f0f0f09e;
     border-radius: 3px
 }
 
 @media print {
     html body {
-        background-color: #fff
+        background-color: rgba(255, 255, 255, 0.764)
     }
 
     html body h1,
@@ -315,7 +316,7 @@ html body kbd {
     }
 
     html body blockquote {
-        color: #5c5c5c
+        color: #5c5c5c8c
     }
 
     html body pre {
@@ -337,222 +338,6 @@ html body kbd {
         word-wrap: break-word;
         white-space: pre
     }
-}
-
-.document {
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box
-}
-
-.document .pagebreak,
-.document .newpage {
-    page-break-before: always
-}
-
-.document pre.line-numbers {
-    position: relative;
-    padding-left: 3.8em;
-    counter-reset: linenumber
-}
-
-.document pre.line-numbers>code {
-    position: relative
-}
-
-.document pre.line-numbers .line-numbers-rows {
-    position: absolute;
-    pointer-events: none;
-    top: 1em;
-    font-size: 100%;
-    left: 0;
-    width: 3em;
-    letter-spacing: -1px;
-    border-right: 1px solid #999;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none
-}
-
-.document pre.line-numbers .line-numbers-rows>span {
-    pointer-events: none;
-    display: block;
-    counter-increment: linenumber
-}
-
-.document pre.line-numbers .line-numbers-rows>span:before {
-    content: counter(linenumber);
-    color: #999;
-    display: block;
-    padding-right: .8em;
-    text-align: right
-}
-
-.document .mathjax-exps .MathJax_Display {
-    text-align: center !important
-}
-
-.document:not([for="preview"]) .code-chunk .btn-group {
-    display: none
-}
-
-.document:not([for="preview"]) .code-chunk .status {
-    display: none
-}
-
-.document:not([for="preview"]) .code-chunk .output-div {
-    margin-bottom: 16px
-}
-
-.scrollbar-style::-webkit-scrollbar {
-    width: 8px
-}
-
-.scrollbar-style::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: transparent
-}
-
-.scrollbar-style::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: rgba(150, 150, 150, 0.66);
-    border: 4px solid rgba(150, 150, 150, 0.66);
-    background-clip: content-box
-}
-
-html body[for="presentation"]:not([data-presentation-mode]) {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    overflow: auto
-}
-
-html body[for="presentation"]:not([data-presentation-mode]) .document {
-    position: relative;
-    top: 0
-}
-
-@media screen and (min-width:914px) {
-    html body[for="presentation"]:not([data-presentation-mode]) .document {
-        padding: 2em calc(50% - 457px + 2em)
-    }
-}
-
-@media screen and (max-width:914px) {
-    html body[for="presentation"]:not([data-presentation-mode]) .document {
-        padding: 2em
-    }
-}
-
-@media screen and (max-width:450px) {
-    html body[for="presentation"]:not([data-presentation-mode]) .document {
-        font-size: 14px !important;
-        padding: 1em
-    }
-}
-
-@media print {
-    html body[for="presentation"]:not([data-presentation-mode]) #sidebar-toc-btn {
-        display: none
-    }
-}
-
-html body[for="presentation"]:not([data-presentation-mode]) #sidebar-toc-btn {
-    position: fixed;
-    bottom: 8px;
-    left: 8px;
-    font-size: 28px;
-    cursor: pointer;
-    color: inherit;
-    z-index: 99;
-    width: 32px;
-    text-align: center;
-    opacity: .4
-}
-
-html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn {
-    opacity: 1
-}
-
-html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 100%;
-    padding: 32px 0 48px 0;
-    font-size: 14px;
-    box-shadow: 0 0 4px rgba(150, 150, 150, 0.33);
-    box-sizing: border-box;
-    overflow: auto;
-    background-color: inherit
-}
-
-html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar {
-    width: 8px
-}
-
-html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background-color: transparent
-}
-
-html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-    background-color: rgba(150, 150, 150, 0.66);
-    border: 4px solid rgba(150, 150, 150, 0.66);
-    background-clip: content-box
-}
-
-html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a {
-    text-decoration: none
-}
-
-html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul {
-    padding: 0 1.6em;
-    margin-top: .8em
-}
-
-html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li {
-    margin-bottom: .8em
-}
-
-html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul {
-    list-style-type: none
-}
-
-html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .document {
-    left: 300px;
-    width: calc(100% - 300px);
-    padding: 2em calc(50% - 457px - 150px);
-    margin: 0;
-    box-sizing: border-box
-}
-
-@media screen and (max-width:1274px) {
-    html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .document {
-        padding: 2em
-    }
-}
-
-@media screen and (max-width:450px) {
-    html body[for="presentation"]:not([data-presentation-mode])[html-show-sidebar-toc] .document {
-        width: 100%
-    }
-}
-
-html body[for="presentation"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .document {
-    left: 50%;
-    transform: translateX(-50%)
-}
-
-html body[for="presentation"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc {
-    display: none
 }
 
 .document.document .center {

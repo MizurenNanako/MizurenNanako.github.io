@@ -1,0 +1,69 @@
+.document {
+    width: calc(50% + 7.6em);
+    max-width: 1200px;
+    border-radius: 0.5em;
+    height: 100%;
+    padding-left: 0.5em;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.512);
+}
+
+.document .pagebreak,
+.document .newpage {
+    page-break-before: always
+}
+
+.document pre.line-numbers {
+    position: relative;
+    padding-left: 3.5cm;
+    counter-reset: linenumber
+}
+
+.document pre.line-numbers>code {
+    position: relative
+}
+
+.document pre.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 1em;
+    font-size: 100%;
+    left: 0;
+    width: 3em;
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.document pre.line-numbers .line-numbers-rows>span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber
+}
+
+.document pre.line-numbers .line-numbers-rows>span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: .8em;
+    text-align: right
+}
+
+.document .mathjax-exps .MathJax_Display {
+    text-align: center !important
+}
+
+.document:not([for="preview"]) .code-chunk .btn-group {
+    display: none
+}
+
+.document:not([for="preview"]) .code-chunk .status {
+    display: none
+}
+
+.document:not([for="preview"]) .code-chunk .output-div {
+    margin-bottom: 16px
+}
