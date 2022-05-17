@@ -1,3 +1,3 @@
 #!/bin/sh
 
-mv main.html docs/
+mv main.html index.html
