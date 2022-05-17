@@ -1,0 +1,31 @@
+.lumia,
+.lumia a,
+a .lumia,
+.lumia a.new {
+    background-color: #252525;
+    color: #252525;
+    text-shadow: none;
+}
+
+.lumia:hover,
+.lumia:active,
+.lumia:hover .lumia,
+.lumia:active .lumia {
+    color: rgba(230, 231, 234, 0.848) !important;
+}
+
+.lumia:hover a,
+a:hover .lumia,
+.lumia:active a,
+a:active .lumia {
+    color: rgba(173, 216, 230, 0.887) !important;
+}
+
+.lumia:hover .new,
+.lumia .new:hover,
+.new:hover .lumia,
+.lumia:active .new,
+.lumia .new:active,
+.new:active .lumia {
+    color: #BA0000 !important;
+}
