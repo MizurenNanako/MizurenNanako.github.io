@@ -1,6 +1,7 @@
 .document {
-    width: calc(50% + 7.6em);
+    width: calc(50% + 10em);
     max-width: 1200px;
+    min-width: 300px;
     border-radius: 0.5em;
     height: 100%;
     padding-left: 0.5em;
